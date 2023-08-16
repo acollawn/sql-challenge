@@ -5,13 +5,19 @@ Module 9 SQL Challenge
 Don't forget to refresh Database to show tables
 
 ## Locate lines in table in lecture 9.1 - 34 minutes in
+
   SELECT column_name
+  
   FROM table_name
 
   Filter
+  
   SELECT column(s)_name
+  
   FROM table_name
+  
   WHERE column_name = 'value we are looking for'
+  
   AND column_name =/<> 'value';
 
   Filter Example
