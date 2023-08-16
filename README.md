@@ -20,7 +20,7 @@ Don't forget to refresh Database to show tables
     WHERE pet_type = 'dog'
     AND pet_age > 5;
 
-## Wild card
+## Wild card 
 % sign signifies 0,1, or multiple different characters than what is searched for
   example
     SELECT *
