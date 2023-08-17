@@ -1,6 +1,11 @@
 # SQL-Challenge
 Module 9 SQL Challenge
 
+
+# QUESTION
+In dept_manager dept_no is a foreign key but in departments it is a primary key?
+
+
 # Lecture Help
 Don't forget to refresh Database to show tables
 
