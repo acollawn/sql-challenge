@@ -1,83 +1,24 @@
 # SQL-Challenge
 Module 9 SQL Challenge
 
-
-# QUESTION
-In dept_manager dept_no is a foreign key but in departments it is a primary key?
-
-
-# Lecture Help
-Don't forget to refresh Database to show tables
-
-## Locate lines in table in lecture 9.1 - 34 minutes in
-
-  SELECT column_name
+# Requirements
+## Data Modeling (10 points)
+* Entity Relationship Diagram is included or table schemas provided for all tables (10 points)
+## Data Engineering (70 points)
+* All required columns are defined for each table (10 points)
+* Columns are set to the correct data type (10 points)
+* Primary Keys set for each table (10 points)
+* Correctly references related tables (10 points)
+* Tables are correctly related using Foreign Keys (10 points)
+* Correctly uses NOT NULL condition on necessary columns (10 points)
+* Accurately defines value length for columns (10 points)
+## Data Analysis (20 points)
+* List the employee number, last name, first name, sex, and salary of each employee (2 points)
+* List the first name, last name, and hire date for the employees who were hired in 1986 (2 points)
+* List the manager of each department along with their department number, department name, employee number, last name, and first name (2 points)
+* List the department number for each employee along with that employee’s employee number, last name, first name, and department name (2 points)
+* List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B (2 points)
+* List each employee in the Sales department, including their employee number, last name, and first name (2 points)
+* List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name (4 points)
+* List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name) (4 points)
   
-  FROM table_name
-
- ### Filter
-  
-  SELECT column(s)_name
-  
-  FROM table_name
-  
-  WHERE column_name = 'value we are looking for'
-  
-  AND column_name =/<> 'value';
-
-
-
-  ### Filter Example
-  
-    SELECT pet_name, pet_type
-    
-    FROM people
-    
-    WHERE pet_type = 'dog'
-    
-    AND pet_age > 5;
-
-## Wild card 
-
-% sign signifies 0,1, or multiple different characters than what is searched for
-  ### example
-  
-    SELECT *
-    
-    FROM actor
-    
-    WHERE last_name LIKE 'Will%';
-
-  _ symbol signifies 1 character that is different from the searched value
- ### example
- 
-    SELECT *
-    
-    FROM actor
-    
-    WHERE first_name LIKE '_an';
-
-## Join tables
-
-  Inner Join - returns records that have matching values in both tables
-  
- ### example
-    SELECT names.name, commodity.commod, commodity.commod_tp, commodity.commod_group
-    
-    FROM names
-    
-    INNER JOIN commodity ON 
-    
-    commodity.dep_id=names.dep_id
-    
- or you can abbreviate
- 
-### example
-
-    SELECT n.name, c.commod, c.commod_tp, c.commod_group
-    
-    FROM names as n
-    
-    INNER JOIN commodity as c ON 
-    
-    c.dep_id=n.dep_id
